@@ -1,0 +1,1 @@
+import{Ba as s,R as i,oa as o,pa as a,xa as r}from"./chunk-2WJLTE3U.js";var f=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=i({type:e,selectors:[["app-loading"]],standalone:!0,features:[s],decls:2,vars:0,template:function(n,d){n&1&&(o(0,"div"),r(1,"Loading..."),a())},encapsulation:2});let t=e;return t})();export{f as a};

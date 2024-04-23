@@ -1,0 +1,1 @@
+import{U as i}from"./chunk-2WJLTE3U.js";var a=(()=>{let t=class t{transform(r){return r[0].toUpperCase()+r.slice(1)}};t.\u0275fac=function(n){return new(n||t)},t.\u0275pipe=i({name:"titlecasefirstword",type:t,pure:!0,standalone:!0});let e=t;return e})();export{a};
