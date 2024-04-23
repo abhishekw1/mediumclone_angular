@@ -1,8 +1,10 @@
 # Project Details: Medium Clone using Angular with NgRx
 
+
 ## Overview
 
 This project aims to replicate the functionality of the popular blogging and publishing platform, Medium, using Angular with NgRx for state management. The Medium clone includes essential features such as user registration, login, article creation, global and personalized feeds, following and unfollowing users and favoriting articles.
+**Project Link:** [Medium Clone Project](https://abhishekw1.github.io/mediumclone_angular/global-feed)
 
 ## Technologies Used
 
