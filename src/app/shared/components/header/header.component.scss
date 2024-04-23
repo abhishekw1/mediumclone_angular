@@ -1,0 +1,20 @@
+.router-link-active {
+  font-weight: 500;
+  color: black;
+}
+
+.bi {
+  margin-right: 0.25rem;
+  color: cornflowerblue;
+}
+@media screen and (min-width: 992px) {
+  .navbar-nav {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .nav-item {
+    padding-left: 1rem;
+  }
+}

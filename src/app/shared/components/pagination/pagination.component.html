@@ -1,0 +1,11 @@
+<nav aria-label="...">
+  <ul class="pagination">
+    @for (page of pages; track $index) {
+    <li class="page-item" [ngClass]="{ 'active-pg': currentPage === page }">
+      <a class="page-link" [routerLink]="url" [queryParams]="{ page: page }">{{
+        page
+      }}</a>
+    </li>
+    }
+  </ul>
+</nav>

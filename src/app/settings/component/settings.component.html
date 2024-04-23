@@ -1,0 +1,84 @@
+<div class="banner">
+  <div class="container">
+    <h1>Settings</h1>
+  </div>
+</div>
+@if (data$|async;as data) {
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-10">
+      @if (data.bakendErrors) {
+      <app-backend-error-messages
+        [backendErrors]="data.bakendErrors"
+      ></app-backend-error-messages>
+      }
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="imageFormControlInput1" class="form-label"
+            >Image Url</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="imageFormControlInput1"
+            placeholder="image"
+            formControlName="image"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input
+            type="text"
+            class="form-control"
+            name="username"
+            id="username"
+            formControlName="username"
+            placeholder="Username"
+          />
+          <small id="helpId" class="form-text text-muted">Help text</small>
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="email"
+            formControlName="email"
+            aria-describedby="emailHelpId"
+            placeholder="abc@mail.com"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="bioFormContrilInput2" class="form-label">Bio</label>
+          <textarea
+            class="form-control"
+            id="bioFormContrilInput2"
+            rows="2"
+            formControlName="bio"
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            data-bs-toggle="submit"
+            [disabled]="form.invalid || data.isSubmitting"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+      <hr class="my-3" />
+      <button
+        type="submit"
+        class="btn btn-outline-danger"
+        data-bs-toggle="button"
+        (click)="Logout()"
+      >
+        Or click here to logout
+      </button>
+    </div>
+  </div>
+</div>
+}

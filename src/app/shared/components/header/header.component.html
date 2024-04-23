@@ -1,0 +1,82 @@
+<ng-container *ngIf="data$ | async as data">
+  <nav class="navbar navbar-expand-sm bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" href="#">CMedium</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        (click)="isCollapse = !isCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="navbar-collapse justify-content-end"
+        id="navbarNav"
+        [ngClass]="{ collapse: isCollapse }"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              aria-current="page"
+              routerLink="/"
+              routerLinkActive="router-link-active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Home</a
+            >
+          </li>
+          <ng-container *ngIf="data.currentUser; else reglog">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                routerLink="/article/new"
+                routerLinkActive="router-link-active"
+                >New Articles</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                routerLink="/settings"
+                routerLinkActive="router-link-active"
+                ><i class="bi bi-gear-fill"></i>Settings</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [routerLink]="['/profiles', data.currentUser.username]"
+                routerLinkActive="router-link-active"
+                ><i class="bi bi-person-square"></i
+                >{{ data.currentUser.username }}</a
+              >
+            </li>
+          </ng-container>
+          <ng-template #reglog>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                routerLink="/login"
+                routerLinkActive="router-link-active"
+                >Sign In</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                routerLink="/register"
+                routerLinkActive="router-link-active"
+                >Sign Up</a
+              >
+            </li>
+          </ng-template>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</ng-container>

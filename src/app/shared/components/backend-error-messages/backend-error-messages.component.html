@@ -1,0 +1,5 @@
+@for (error of errorMessages; track $index) {
+<div class="alert alert-danger" role="alert">
+  {{ error | titlecasefirstword }}
+</div>
+}
